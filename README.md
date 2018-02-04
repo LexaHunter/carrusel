@@ -20,7 +20,8 @@ Mantenemos el header anterior, pero al hacer scroll éste desaparece y se queda 
 Además, a este menú le hemos añadido subopciones, y al pasar el ratón por encima de cada sección ésta se marca en un tono azulado y se subraya, además de desplegarse un submenú que se comporta de igual manera.
 
 ### 5. Interactividad de las imágenes
-En cuanto a las imágenes hemos incorporado varios pequeños detalles al hacer hover. En un principio, las imágenes aparecen con un tono blanquecino, que al poner el ratón encima se vuelve del todo opaca y se desplaza suavemente hacia arriba dejando paso a un menu de pie de imágen. Este menú contiene el nombre del sector al que hace referencia y una nota con algo más de información. En el hueco de la derecha, aparecen un corazón que se puede marcar y desmarcar, un carrito que al pasar por encima se balancea y un botón paar dejar un comentario que hace zoom-in. Todo esto está implementado en css/anima_imagenes.css. 
+En cuanto a las imágenes hemos incorporado varios pequeños detalles al hacer hover. En un principio, las imágenes aparecen con un tono blanquecino, que al poner el ratón encima se vuelve del todo opaca y se desplaza suavemente hacia arriba dejando paso a un menu de pie de imágen. Este menú contiene el nombre del sector al que hace referencia y una nota con algo más de información. En el hueco de la derecha, aparecen un corazón que se puede marcar y desmarcar, un carrito que al pasar por encima se balancea y un botón para dejar un comentario que hace zoom-in. Todo esto está implementado en css/anima_imagenes.css.
+* Enlaces al [corazon](https://codepen.io/anon/pen/mXPBLG) y al estilo del [pie de imagen](https://tympanus.net/codrops/2013/06/18/caption-hover-effects/).
 
 ### 6. Aviso de uso de cookies
 El estilo de cookies está definido en el fichero css/slider_style.css, y el funcionamiento de éstas en js/main.js.
