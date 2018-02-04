@@ -32,28 +32,26 @@ $(document).ready(function(){
 	var imgItems = $('.slider li').length; // Numero de Slides
 	var imgPos = 1;
 
-	// Agregando paginacion --
+	// Circulos para pasar pagina
 	for(i = 1; i <= imgItems; i++){
 		$('.pagination').append('<li><span class="fa fa-circle"></span></li>');
-	} 
-	//------------------------
+	}
 
 	$('.slider li').hide(); // Ocultanos todos los slides
-	$('.slider li:first').show(); // Mostramos el primer slide
-	$('.pagination li:first').css({'color': '#CD6E2E'}); // Damos estilos al primer item de la paginacion
+	$('.slider li:first').show(); // Mostramos el primero
+	$('.pagination li:first').css({'color': '#57DADC'}); 
 
-	// Ejecutamos todas las funciones
+	// Funciones
 	$('.pagination li').click(pagination);
 	$('.right span').click(nextSlider);
 	$('.left span').click(prevSlider);
 
-
+	// intervalo en el que pasa automaticamente el slider
 	setInterval(function(){
 		nextSlider();
 	}, 10000);
 
-	// FUNCIONES =========================================================
-
+	// FUNCIONES 
 	function pagination(){
 		var paginationPos = $(this).index() + 1; // Posicion de la paginacion seleccionada
 
@@ -62,10 +60,9 @@ $(document).ready(function(){
 
 		// Dandole estilos a la paginacion seleccionada
 		$('.pagination li').css({'color': '#858585'});
-		$(this).css({'color': '#CD6E2E'});
+		$(this).css({'color': '#57DADC'});
 
 		imgPos = paginationPos;
-
 	}
 
 	function nextSlider(){
@@ -73,11 +70,10 @@ $(document).ready(function(){
 		else {imgPos++;}
 
 		$('.pagination li').css({'color': '#858585'});
-		$('.pagination li:nth-child(' + imgPos +')').css({'color': '#CD6E2E'});
+		$('.pagination li:nth-child(' + imgPos +')').css({'color': '#57DADC'});
 
-		$('.slider li').hide(); // Ocultamos todos los slides
-		$('.slider li:nth-child('+ imgPos +')').fadeIn(); // Mostramos el Slide seleccionado
-
+		$('.slider li').hide(); 
+		$('.slider li:nth-child('+ imgPos +')').fadeIn(); 
 	}
 
 	function prevSlider(){
@@ -85,17 +81,16 @@ $(document).ready(function(){
 		else {imgPos--;}
 
 		$('.pagination li').css({'color': '#858585'});
-		$('.pagination li:nth-child(' + imgPos +')').css({'color': '#CD6E2E'});
+		$('.pagination li:nth-child(' + imgPos +')').css({'color': '#57DADC'});
 
-		$('.slider li').hide(); // Ocultamos todos los slides
-		$('.slider li:nth-child('+ imgPos +')').fadeIn(); // Mostramos el Slide seleccionado
+		$('.slider li').hide();
+		$('.slider li:nth-child('+ imgPos +')').fadeIn(); 
 	}
 
 });
 
 // Menu fijo al hacer scroll
 $(window).scroll(function(){
-
     if ($(this).scrollTop() > 350){
 		 $('.menu').addClass("fijo").fadeIn();
 	}
@@ -103,7 +98,6 @@ $(window).scroll(function(){
 		$('.menu').removeClass("fijo");
 	}
 });
-
 
 // cookies
 function getCookie(c_name){

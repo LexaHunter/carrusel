@@ -12,11 +12,11 @@ https://www.youtube.com/watch?v=uzLabNV0rmQ
 .slideshow{
 	margin: 0;
 	-webkit-box-sizing: none;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	width: 102%;
+	-moz-box-sizing: none;
+	box-sizing: none;
+	width: 100%;
 	position: relative;
-	margin-left: -9%;
+	margin-left: -7%;
 }
 
 ul, ol{
@@ -97,7 +97,6 @@ body{
 .left{
 	left: 90px;
 }
-
 .right{
 	right: -40px;
 }
@@ -106,25 +105,21 @@ body{
 	.slider .caption p{
 		display: none;
 	}
-
 	.slider .caption h1{
 		font-size: 35px;
 	}
-
 	.left, .right{
 		font-size: 30px;
 	}
-
 	.slider li img{
 		width: 600px;
 	}
-
 	.pagination{
 		display: none;
 	}
 }
 
-
+/* COOKIES */
 #barraaceptacion {
     display:none;
     position:fixed;
@@ -138,6 +133,13 @@ body{
     color:#fff;
     z-index:99999;
 }
+
+.cookies{
+  display: none;
+  margin-left: 195px;
+  width: 71%;
+  text-align: center;
+}
  
 .inner {
     width:100%;
@@ -150,14 +152,14 @@ body{
  
 .inner a.ok {
     padding:4px;
-    color:#00ff2e;
+    color:#008284;
     text-decoration:none;
 }
  
 .inner a.info {
     padding-left:5px;
     text-decoration:none;
-    color:#faff00;
+    color:#57DADC;
 }
 
 

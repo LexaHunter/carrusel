@@ -15,7 +15,7 @@
         <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
 
         <link rel="stylesheet" type="text/css" href="css/scroll_style.css" />
-        <link rel="stylesheet" type="text/css" href="css/menu_desplegable.css" />
+        <link rel="stylesheet" type="text/css" href="css/anima_imagenes.css" />
 
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/main.js"></script>
@@ -124,78 +124,130 @@
                                 </section>
                             </li>
                         </ul>
-
                         <ol class="pagination"> </ol>
-                    
                         <div class="left">
                             <span class="fa fa-chevron-left"></span>
                         </div>
-
                         <div class="right">
                             <span class="fa fa-chevron-right"></span>
                         </div>
-
                     </div>
                 </div>
                 <!-- Fin de Carrusel -->
-
 
                 <div class="clear"></div>
 
                 <!-- SCROLL -->
                 <div class="container cf">
-                <!-- Dos Imágenes -->
-                <div class="grid_12 alpha">
-                    <div class="grid_5">
-                        <div class="animation-element slide-left testimonial">
-                            <a href=""><img src="images/chico_1_2.png" alt="Sudaderas" /></a>
-                            <a href=""><p>Sudaderas</p></a>
+
+                    <!-- Dos Imágenes -->
+                    <div class="grid_12 alpha">
+                        <!-- Imagen 1 con pie desplegable -->
+                        <div class="grid_5">
+                            <!-- Clases correspondientes al Scroll -->
+                            <div class="animation-element slide-left">
+                                <!-- Organizacion correspondiente al pie de imagen -->
+                                <ul class="hover estilosimg">
+                                <li>
+                                <figure>
+                                    <img src="images/chico_1_2.png" alt="Sudaderas">
+                                    <!-- Pie de pagina oculto-mostrar -->
+                                    <figcaption>
+                                        <h3>Sudaderas</h3>
+                                        <span>Temporada 2018</span>
+                                        <!-- Corazon like -->
+                                        <input type="checkbox" id="like3"/>
+                                        <label for="like">
+                                            <svg viewBox="0 0 24 24">
+                                                <path d="M12 21.35l-1.45-1.32c-5.15-4.67-8.55-7.75-8.55-11.53 0-3.08 2.42-5.5 5.5-5.5 1.74 0 3.41.81 4.5 2.09 1.09-1.28 2.76-2.09 4.5-2.09 3.08 0 5.5 2.42 5.5 5.5 0 3.78-3.4 6.86-8.55 11.54l-1.45 1.31z"/>
+                                            </svg>
+                                        </label>
+
+                                        <div class="cart">
+                                            <img id="cart" src="images/cart1.png" alt="Cart">
+                                        </div>
+                                        <div class="boton"><a href="#">Ver más</a></div>
+                                    </figcaption>
+                                </figure>
+                                </li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-                    <div class="grid_6">
-                        <div class="animation-element slide-right testimonial">
-                            <a href=""><img src="images/chica_1_2.png" alt="Abrigos" /></a>
-                            <a href=""><p>Abrigos</p></a>
+
+                        <!-- Imagen 2 con pie desplegable -->
+                        <div class="grid_6">
+                            <!-- Clases correspondientes al Scroll -->
+                            <div class="animation-element slide-right">
+                                <!-- Organizacion correspondiente al pie de imagen -->
+                                <ul class="hover estilosimg">
+                                <li>
+                                <figure>
+                                    <img src="images/chica_1_2.png" alt="Sudaderas">
+                                    <!-- Pie de pagina oculto-mostrar -->
+                                    <figcaption>
+                                        <h3>Abrigos</h3>
+                                        <span>Mujer y Hombre</span>
+                                        <input type="checkbox" id="like"/>
+                                        <!-- Corazon like -->
+                                        <label for="like">
+                                            <svg viewBox="0 0 24 24">
+                                                <path d="M12 21.35l-1.45-1.32c-5.15-4.67-8.55-7.75-8.55-11.53 0-3.08 2.42-5.5 5.5-5.5 1.74 0 3.41.81 4.5 2.09 1.09-1.28 2.76-2.09 4.5-2.09 3.08 0 5.5 2.42 5.5 5.5 0 3.78-3.4 6.86-8.55 11.54l-1.45 1.31z"/>
+                                            </svg>
+                                        </label>
+
+                                        <div class="cart">
+                                            <img id="cart2" src="images/cart1.png" alt="Cart">
+                                        </div>
+                                        <div class="boton"><a href="#">Ver más</a></div>
+                                    </figcaption>
+                                </figure>
+                                </li>
+                                </ul>
+                            </div>
                         </div>
+                        
                     </div>
                     
-                </div>
-                
-                <div class="clear"></div>
-                
-                <!-- Imagen Ancha -->
-                <div class="grid_12">
-                    <div class="grid_8">
-                        <div class="animation-element slide-left testimonial">
-                            <a href=""><img src="images/zapatos.jpg" alt="Zapatos" /></a>
+                    <div class="clear"></div>
+                    
+                    <!-- Imagen Ancha -->
+                    <div class="grid_12 estilosimg">
+                        <div class="grid_11">
+                            <!-- Clases correspondientes al Scroll -->
+                            <div class="animation-element slide-left">
+                                <!-- Organizacion correspondiente al pie de imagen -->
+                                <ul class="hover estilosimg">
+                                <li>
+                                <figure>
+                                    <img src="images/zapatos.jpg" alt="Zapatos">
+                                    <!-- Pie de pagina oculto-mostrar -->
+                                    <figcaption>
+                                        <h3>Zapatos</h3>
+                                        <span>Rebajas!</span>
+                                        <input type="checkbox" id="like2"/>
+                                        <!-- Corazon like -->
+                                        <label for="like">
+                                            <svg viewBox="0 0 24 24">
+                                                <path d="M12 21.35l-1.45-1.32c-5.15-4.67-8.55-7.75-8.55-11.53 0-3.08 2.42-5.5 5.5-5.5 1.74 0 3.41.81 4.5 2.09 1.09-1.28 2.76-2.09 4.5-2.09 3.08 0 5.5 2.42 5.5 5.5 0 3.78-3.4 6.86-8.55 11.54l-1.45 1.31z"/>
+                                            </svg>
+                                        </label>
+
+                                        <div class="cart">
+                                            <img id="cart3" src="images/cart1.png" alt="Cart">
+                                        </div>
+                                        <div class="boton"><a href="#">Ver más</a></div>
+                                    </figcaption>
+                                </figure>
+                                </li>
+                                </ul>
+                            </div>
+
                         </div>
+                        
                     </div>
-                    <div class="grid_2">
-                        <div class="animation-element slide-right testimonial">
-                            <a href=""><p>Zapatos</p></a>
-                        </div>
-                    </div>
-                </div>
                 </div>
                 <!-- Fin de SCROLL -->
                 
-
-                <div class="clear"></div>
-                
-
-                <!--//BLOQUE COOKIES-->
-                <div class="grid_12">
-                    <section>
-                    <div id="barraaceptacion" style="display: block;">
-                        <div class="inner">
-                            Solicitamos su permiso para obtener datos estadísticos de su navegación en esta web, en cumplimiento del Real 
-                            Decreto-ley 13/2012. Si continúa navegando consideramos que acepta el uso de cookies.
-                            <a href="javascript:void(0);" class="ok" onclick="PonerCookie();"><b>OK</b></a> | 
-                            <a href="http://politicadecookies.com" target="_blank" class="info">Más información</a>
-                        </div>
-                    </div>
-                    </section>
-                </div>
 
                 <div class="clear"></div>
 
@@ -207,6 +259,16 @@
                 <!-- Batería de Enlaces -->
                 <div class="grid_12">
                     <section id="enlaces_pie">
+
+                    <!--//BLOQUE COOKIES-->
+                    <div class="cookies" id="barraaceptacion" style="display: block;">
+                        <div class="inner">
+                            Solicitamos su permiso para obtener datos estadísticos de su navegación en esta web, en cumplimiento del Real 
+                            Decreto-ley 13/2012. Si continúa navegando consideramos que acepta el uso de cookies.
+                            <a href="javascript:void(0);" class="ok" onclick="PonerCookie();"><b>OK</b></a> | 
+                            <a href="http://politicadecookies.com" target="_blank" class="info">Más información</a>
+                        </div>
+                    </div>
                         <article>
                             <h3><a href="html/newsletter.html">Suscríbete</a></h3>
                             <h3>Colecciones</h3>
