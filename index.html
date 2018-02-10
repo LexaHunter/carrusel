@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title>New Brand</title>
-        <meta name="author" content="Gema de la Fuente Romero y Álvar Ruiz Tavira" />
+        <meta name="author" content="Álvar Ruiz Tavira y Paz Rubio Rubio" />
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <link rel="stylesheet" type="text/css" media="all" href="css/normalize.css" />
         <!--<link rel="stylesheet" type="text/css" media="all" href="960-Grid-System-master/code/css/reset.css" />-->
@@ -28,10 +28,9 @@
             <header>
                 
                 <!-- Primera Fila del Encabezado -->
-                <div class="grid_2 suffix_8"><div class="button"><a href="html/newsletter.html">Suscríbete a nuestra Newsletter</a></div></div>
+                <div class="grid_2 suffix_8"><div id="top_left_button" class="button"><!--<a href="html/newsletter.html">Suscríbete a nuestra Newsletter</a>--></div></div>
                 
-                <div class="grid_2">
-                    <div class="button"><a href="">Regístrate / Inicia Sesión</a></div>
+                <div id="top_right_container" class="grid_2"><div id="top_right_button" class="button"><!--<a href="html/login_signup.html">Regístrate / Inicia Sesión</a>--></div>
                 </div>
                 
                 <div class="clear"></div>
@@ -141,15 +140,15 @@
                 <div class="container cf">
 
                     <!-- Dos Imágenes -->
-                    <div class="grid_12 alpha">
+                    <div class="grid_12">
                         <!-- Imagen 1 con pie desplegable -->
-                        <div class="grid_5">
+                        <div class="grid_5 alpha">
                             <!-- Clases correspondientes al Scroll -->
                             <div class="animation-element slide-left">
                                 <!-- Organizacion correspondiente al pie de imagen -->
                                 <ul class="hover estilosimg">
                                 <li>
-                                <figure>
+                                <figure id="figure_1">
                                     <img src="images/chico_1_2.png" alt="Sudaderas">
                                     <!-- Pie de pagina oculto-mostrar -->
                                     <figcaption>
@@ -166,7 +165,7 @@
                                         <div class="cart">
                                             <img id="cart" src="images/cart1.png" alt="Cart">
                                         </div>
-                                        <div class="boton"><a href="#">Comentar</a></div>
+                                        <div class="boton" id="foto_1"><a>Comentar</a></div>
                                     </figcaption>
                                 </figure>
                                 </li>
@@ -181,7 +180,7 @@
                                 <!-- Organizacion correspondiente al pie de imagen -->
                                 <ul class="hover estilosimg">
                                 <li>
-                                <figure>
+                                <figure id="figure_2">
                                     <img src="images/chica_1_2.png" alt="Sudaderas">
                                     <!-- Pie de pagina oculto-mostrar -->
                                     <figcaption>
@@ -198,7 +197,7 @@
                                         <div class="cart">
                                             <img id="cart2" src="images/cart1.png" alt="Cart">
                                         </div>
-                                        <div class="boton"><a href="#">Comentar</a></div>
+                                        <div class="boton" id="foto_2"><a href="#">Comentar</a></div>
                                     </figcaption>
                                 </figure>
                                 </li>
@@ -218,7 +217,7 @@
                                 <!-- Organizacion correspondiente al pie de imagen -->
                                 <ul class="hover estilosimg">
                                 <li>
-                                <figure>
+                                <figure id="figure_3">
                                     <img src="images/zapatos.jpg" alt="Zapatos">
                                     <!-- Pie de pagina oculto-mostrar -->
                                     <figcaption>
@@ -235,7 +234,7 @@
                                         <div class="cart">
                                             <img id="cart3" src="images/cart1.png" alt="Cart">
                                         </div>
-                                        <div class="boton"><a href="#">Comentar</a></div>
+                                        <div class="boton" id="foto_3"><a href="#">Comentar</a></div>
                                     </figcaption>
                                 </figure>
                                 </li>
@@ -330,5 +329,9 @@
                 
             </footer>
         </div>
+
+        <script type="application/javascript" src="js/cookie.js"></script> 
+        <script type="application/javascript" src="js/index.js"></script>
+        
     </body>
 </html>
