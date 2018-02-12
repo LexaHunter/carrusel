@@ -27,6 +27,7 @@ window.addEventListener("load", function(event) {
 
 $(".boton").click(function(event) {
     //var boton = event.target;
+
     $(event.target).parent().parent().parent().append(crearCajaComentario());
 });
 
@@ -46,15 +47,18 @@ document.getElementById("foto_3").addEventListener("click", function(event) {
 function crearCajaComentario() {
     var figcaption = document.createElement("figcaption"),
         contenedorComentarios = document.createElement("div"),
-        comentarios = [["Pepe", "Buen preducto!"], ["Paco", "Cool"], ["Pepa", "Buena calidad"], ["Mario", "Me encanta"], ["Cuqui", "I love it <3"]];
+        comentarios = [["Pepe", "¡Buen producto!"], ["Paco", "Cool"], ["Pepa", "Buena calidad"], ["Mario", "Me encanta"], ["Cuqui", "I love it <3"]];
     
     figcaption.setAttribute("class", "comentarios");
+    
     comentarios.forEach(function(c){
         var parrafoComentario = document.createElement("p");
         parrafoComentario.innerHTML = c[0].concat(" => ", c[1]);
         contenedorComentarios.appendChild(parrafoComentario);
     });
+    
     figcaption.appendChild(contenedorComentarios);
+    
     if(getCookie("user")){
         var formComentarios = document.createElement("form"),
             textarea = document.createElement("textarea"),
@@ -65,6 +69,7 @@ function crearCajaComentario() {
         formComentarios.appendChild("submit");
         figcaption.appendChild(formComentarios);
     }
+    
     return figcaption;
 }
 

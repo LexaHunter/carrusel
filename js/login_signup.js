@@ -7,33 +7,40 @@ var formLogin = document.forms["form_login"],
     direccion = formSignup.elements["direccion"],
     selectPaises = formSignup.elements["pais"],
     contenedorTarjeta = document.getElementById("contenedor_tarjeta"),
-    numTarjeta = formSignup.elements["num_tarjeta"],
-    marcaTarjeta = formSignup.elements["marca_tarjeta"];
+    numTarjeta = null,
+    marcaTarjeta = null;
 
 
 // Al cargar el documento:
 
 window.addEventListener("load", function(event) {
     
-    paisesJSON.paises.forEach(function(pais) {
-        option = document.createElement("option");
-        option.setAttribute("value", pais.nombre);
-        option.innerHTML = pais.nombre;
-        selectPaises.appendChild(option);
-    });
+    /* 
+    Arrancando en json-server el fichero json/paises.json mediante el comando: 
     
-    $("[value=España]").attr("selected", "selected");
+    json-server --watch paises.json
+    */
+    
+    $.getJSON("http://localhost:3000/paises", function(data, status) {
+        if (status == "success") {
+            $.each(data, function(i, pais) {
+                option = $("<option></option>").text(pais.nombre).attr("value", pais.nombre);
+                $(selectPaises).append(option);
+            });
+            $("[value=España]").attr("selected", "selected");
+        }
+    });
     
 });
 
-// Manú de Pestañas
+// Menú de Pestañas
 
 function mostrar(event, formId) {
     
     var tabContent, tabLinks;
     
     tabContent = document.getElementsByClassName("tab_content");
-    for (let i = 0; i < (tabContent.length); i++) {
+    for (let i = 0; i < tabContent.length; i++) {
         tabContent[i].style.display = "none";
     }
 
@@ -67,37 +74,13 @@ password_conf.addEventListener("input", function(event) {
 
 direccion.addEventListener("keyup", function(event) {
     if (direccion.value != "") {
-        contenedorTarjeta.className = "visible";
+        if (contenedorTarjeta.childElementCount == 0) {
+            crearControlesTarjeta();
+        }
     } else {
-        contenedorTarjeta.className = "hidden";
+        $(contenedorTarjeta).empty(); //.children().remove();
     }
 });
-
-numTarjeta.addEventListener("keyup", function(event) {
-    if (numTarjeta.value != "") {
-        marcaTarjeta[0].required = true;
-    } else {
-        marcaTarjeta[0].required = false;
-    }
-});
-
-numTarjeta.addEventListener("input", function(event) {
-    if (marcaTarjeta[0].checked) {
-        validarTarjeta(/^4[0-9]{12}(?:[0-9]{3})?$/);
-    } else if (marcaTarjeta[1].checked) {
-        validarTarjeta(/^(?:5[1-5][0-9]{2}|222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12}$/);
-    } else if (marcaTarjeta[2].checked) {
-        validarTarjeta(/^3[47][0-9]{13}$/);
-    }
-});
-
-function validarTarjeta(regexp) {
-    if (!regexp.test(numTarjeta.value)) {
-        numTarjeta.setCustomValidity("El número de tarjeta no es correcto.");
-    } else {
-        numTarjeta.setCustomValidity("");
-    }
-}
 
 formLogin.addEventListener("submit", function(event) {
     
@@ -131,3 +114,57 @@ formSignup.addEventListener("submit", function(event) {
     setCookie("user", nombreUsuario, "/");
     
 });
+
+function crearControlesTarjeta() {
+    
+    var radio = [];
+    
+    numTarjeta = $("<input />").attr({type: "text", id: "num_tarjeta", name: "num_tarjeta", placeholder: "Número de Tajeta de Crédito"}).get()[0];
+    
+    $(contenedorTarjeta).append($("<div></div>").append(numTarjeta));
+    
+    $.each(["visa", "mastercard", "americanexpress"], function(index, tipoTarjeta) {
+        radio.push($("<label></label>").attr("for", tipoTarjeta).text(tipoTarjeta.capitalize()), $("<input />").attr({type: "radio", class: "radio", id: tipoTarjeta, name: "marca_tarjeta"}));
+    });
+    
+    $(contenedorTarjeta).append($("<div></div>").append(radio));
+    
+    $("[type=radio]").css("margin", "5px");
+    
+    $("#visa").attr("checked", "checked");
+    
+    marcaTarjeta = $("[name=marca_tarjeta]");
+    
+    establecerValidacionTarjeta();
+    
+}
+
+function establecerValidacionTarjeta() {
+    
+    numTarjeta.addEventListener("input", function(event) {
+        if (marcaTarjeta[0].checked) {
+            validarTarjeta(/^4[0-9]{12}(?:[0-9]{3})?$/);
+        } else if (marcaTarjeta[1].checked) {
+            validarTarjeta(/^(?:5[1-5][0-9]{2}|222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12}$/);
+        } else if (marcaTarjeta[2].checked) {
+            validarTarjeta(/^3[47][0-9]{13}$/);
+        }
+    });
+    
+}
+
+function validarTarjeta(regexp) {
+    if (!regexp.test(numTarjeta.value)) {
+        numTarjeta.setCustomValidity("El número de tarjeta no es correcto.");
+    } else {
+        numTarjeta.setCustomValidity("");
+    }
+}
+
+String.prototype.capitalize = function() {
+    return this.replace(/\w+/g, function(w) {
+        return w.replace(/^[a-z]/, function(l) {
+            return l.toUpperCase();
+        })
+    });
+}

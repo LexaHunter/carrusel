@@ -76,6 +76,9 @@ input[type="submit"] {
   background-color: black;
   font-size: 1.2em; }
 
+input[type="radio"] {
+  margin: 0em 5em; }
+
 select#pais {
   width: 80%; }
 
@@ -124,9 +127,16 @@ select#pais {
       font-size: 2.5em;
       margin: 0; }
     .form_frame form p {
+      font-weight: bold;
       font-size: 1.2em; }
     .form_frame form input {
       margin: 1em 0; }
+
+.hidden {
+  display: none; }
+
+.visible {
+  visibility: visible; }
 
 main {
   text-align: center;
