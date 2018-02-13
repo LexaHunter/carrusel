@@ -1,4 +1,38 @@
+# Manipulación de elementos del escaparate virtual con DOM
 
+## Requisitos funcionales
+
+### 1. Comentarios
+Hemos creado a caja de comentarios, la cual si se está logeado muestra una caja de comentarios con la opción de enviar. Para porder volver al pie de página anterior hemos incluido un botón cerrar. De forma predeterminada se muestran varios mensajes introducidos a mano en un array.
+
+### 2. Paises
+Para la carga de países, hemos creado un archivo json. Para cargarlo, arrancamos en json-server el fichero json/paises.json mediante el comando: 
+json-server --watch paises.json 
+Hemos utilizado el puerto 3000 de localhost (http://localhost:3000/paises).
+El código correspondiente a esta parte se encuentra en el fichero login_signup.js  
+
+
+### 3. Tarjeta de crédito
+El código correspondiente a esta parte se encuentra en el fichero login_signup.js 
+Input de la tarjeta de crédito modificado para crear y eliminar los campos con DOM.
+
+
+### Comentarios
+Sobre las buenas prácticas, hemos aplicado JSLint desde Brackets al fichero dom.js (nos salen varias advertencias sobre "X" usado antes de definirlo, que no hemos sabido resolver ya que forman parte de otros ficheros), y uglify al fichero dom.min.js ([enlace](https://skalman.github.io/UglifyJS-online/)), que será el que cargamos en la página.
+
+Respecto a la práctica anterior, hemos suprimido alguna animación y recolocado ciertos botones en el pie de imagen ya que creaba conflictos. Al hacer esta recolocación y por falta de tiempo, algunos detalles no son visualmente satisfactorios.
+
+### Repositorio
+* Enlace a este propio proyecto: https://github.com/LexaHunter/carrusel
+* Enlace a github pages: https://lexahunter.github.io/carrusel/index.html
+
+#### Autores
+* **Alvar Ruiz** - [Github](https://github.com/alvar-ruiz)
+* **Paz Rubio** - [Github](https://github.com/LexaHunter)
+
+
+# _________________________________________________________________
+# PRÁCTICA ANTERIOR
 # Carrusel y mejora de la interactividad
 
 En esta práctica hemos trabajado sobre la página de moda de Gema de la Fuente y Álvar Ruiz para mejorar y añadir interactividad.

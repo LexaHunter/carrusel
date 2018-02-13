@@ -12,13 +12,10 @@ var formLogin = document.forms["form_login"],
 
 
 // Al cargar el documento:
-
 window.addEventListener("load", function(event) {
-    
     /* 
     Arrancando en json-server el fichero json/paises.json mediante el comando: 
-    
-    json-server --watch paises.json
+            json-server --watch paises.json
     */
     
     $.getJSON("http://localhost:3000/paises", function(data, status) {
@@ -30,11 +27,9 @@ window.addEventListener("load", function(event) {
             $("[value=España]").attr("selected", "selected");
         }
     });
-    
 });
 
 // Menú de Pestañas
-
 function mostrar(event, formId) {
     
     var tabContent, tabLinks;
@@ -55,7 +50,6 @@ function mostrar(event, formId) {
 }
 
 // Validaciones de Formulario
-
 password.addEventListener("input", function(event) {
     if (!/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8}/.test(password.value)) {
         password.setCustomValidity("La contraseña no tiene el formato correcto.");
@@ -83,7 +77,6 @@ direccion.addEventListener("keyup", function(event) {
 });
 
 formLogin.addEventListener("submit", function(event) {
-    
     var nombreUsuario = formLogin.elements["nombre"].value.trim(),
         password = formLogin.elements["password"].value,
         logged = false;
@@ -112,7 +105,6 @@ formSignup.addEventListener("submit", function(event) {
     setCookie(nombreUsuario, sha256(password.value), "/", 365);
     
     setCookie("user", nombreUsuario, "/");
-    
 });
 
 function crearControlesTarjeta() {
