@@ -16,7 +16,6 @@ function crearCajaComentario() {
         contenedorComentarios.appendChild(parrafoComentario);
     });
     
-    $(contenedorComentarios).append(botonCerrar);
     figcaption.appendChild(contenedorComentarios);
     
     if (getCookie("user")) {
@@ -25,9 +24,11 @@ function crearCajaComentario() {
             submit = $("<input />").attr({type: "submit", value: "Comentar", class: "boton"}).get()[0];//document.createElement("submit");
             
 
-        $(formComentarios).append(textarea, submit, botonCerrar);
+        $(formComentarios).append(textarea, submit);
         figcaption.appendChild(formComentarios);
     }
+    
+    $(figcaption).append(botonCerrar);
     
     return figcaption;
     

@@ -46,6 +46,10 @@
     -webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
     -moz-transition: -moz-transform 0.4s, opacity 0.1s;
     transition: transform 0.4s, opacity 0.1s; }
+    .estilosimg figure:hover figcaption input[type="submit"], .estilosimg figure:hover figcaption input[type="button"] {
+      border-radius: 2px;
+      background: #008284;
+      color: #fff; }
 .estilosimg figcaption {
   height: 22%;
   width: 100%;
