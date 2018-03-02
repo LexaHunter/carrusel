@@ -9,6 +9,11 @@
         <link rel="stylesheet" type="text/css" media="all" href="../css/text.css" />
         <link rel="stylesheet" type="text/css" media="all" href="../css/960.css" />
         <link rel="stylesheet" type="text/css" href="../css/escaparate_style.css" />
+        <link rel="stylesheet" type="text/css" href="../css/slider_style.css" />
+        <link rel="stylesheet" type="text/css" href="../css/font-awesome.css" />
+
+        <link rel="stylesheet" type="text/css" href="../css/scroll_style.css" />
+        <link rel="stylesheet" type="text/css" href="../css/anima_imagenes.css" />
     </head>
     <body>
         <div id="content" class="container_12">
@@ -33,19 +38,42 @@
                 
                 <!-- Tercera Fila del Encabezado -->
                 <!-- Menú -->
-                <div class="grid_6 prefix_3">
-                    <nav>
-                        <div class="button"><a href="">Hombre</a></div>
-                        <div class="button"><a href="">Mujer</a></div>
-                        <div class="button"><a href="">Niño/Niña</a></div>
-                    </nav>
-                </div>
-                <!-- Barra de Búsqueda -->
-                <div class="grid_3">
-                    <form id="search">
-                        <label for="search_bar"><img src="../icons/search.svg" alt="" /></label>
-                        <input type="search" name="search_bar" id="search_bar" placeholder="Búsqueda">
-                    </form>
+                <div class="menu">
+                    <div class="grid_6 prefix_3">
+                        <nav>
+                            <ul>
+                                <li><a href="#">Hombre</a>
+                                    <ul>
+                                        <li><a href="#">Novedades</a></li>
+                                        <li><a href="#">Primavera/verano</a></li>
+                                        <li><a href="#">Otoño/invierno</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Mujer</a>
+                                    <ul>
+                                        <li><a href="#">Nueva Colección</a></li>
+                                        <li><a href="#">Primavera/verano</a></li>
+                                        <li><a href="#">Otoño/invierno</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Niño/Niña</a>
+                                    <ul>
+                                        <li><a href="#">0-6 años</a></li>
+                                        <li><a href="#">6-14 años</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- Barra de Búsqueda -->
+                    <div class="grid_3">
+                        <form id="search">
+                            <label for="search_bar"><img src="../icons/search.svg" alt="" /></label>
+                            <div id="search_input">
+                                <input type="search" name="search_bar" id="search_bar" placeholder="Búsqueda">
+                            </div>
+                        </form>
+                    </div>
                 </div>
                 
                 <div class="clear"></div>
@@ -240,11 +268,12 @@
             </footer>
         </div>
         
-        <script src="../js/paises.js"></script>
+        <script src="../js/jquery-3.2.1.js"></script>
         <script src="../js/cookie.js"></script>
         <script src="../js/sha.js"></script>
         <script src="../js/login_signup.js"></script>
-        <script src="../js/jquery-3.2.1.js"></script>
+        <script src="../js/search.js"></script>
+        <script src="../js/dom.min.js"></script>
         
     </body>
 </html>

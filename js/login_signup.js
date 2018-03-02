@@ -12,13 +12,16 @@ var formLogin = document.forms["form_login"],
 
 
 // Al cargar el documento:
+
 window.addEventListener("load", function(event) {
+    
     /* 
-    Arrancando en json-server el fichero json/paises.json mediante el comando: 
-            json-server --watch paises.json
+    Arrancando en json-server el fichero json/paises.json ene l puerto 3002 mediante el comando: 
+    
+    json-server -p 3002 --watch paises.json
     */
     
-    $.getJSON("http://localhost:3000/paises", function(data, status) {
+    /*$.getJSON("http://localhost:3002/paises", function(data, status) {
         if (status == "success") {
             $.each(data, function(i, pais) {
                 option = $("<option></option>").text(pais.nombre).attr("value", pais.nombre);
@@ -26,10 +29,70 @@ window.addEventListener("load", function(event) {
             });
             $("[value=España]").attr("selected", "selected");
         }
-    });
+    });*/
+    
+    var url = "http://localhost:3002/paises",
+        open = null,
+        promesa = new Promise(function(resolve, reject) {
+        
+            // Con el objeto XMLHtpRequest
+            
+            // 1º) Instanciación del objeto XMLHttpRequest = representa la petición.
+            let xhr = new XMLHttpRequest();
+
+            // 2º) Configuración de la petición - Se realiza mediante el método .open()
+            xhr.open("get", url, true);
+                // Si se va a recibir un archivo JSON, se establece con la propiedad .responseType
+            xhr.responseType = "json";
+
+            // 3º) Configuración de la respuesta del objeto XMLHttpRequest = se define mediante las propiedades onreadystatechange u onload
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4) { // Cuando la petición se haya completado. => Puede adoptar 5 valores: 0 (unsent), 1 (opened), 2 (headers_received), 3 (loading) y 4 (done).
+                    if (xhr.status == 200) { // Estado de la petición representado mediante el código del protocolo HTTP - El código 200 indica que la petición ha tenido éxito.
+                        resolve(xhr.response); // !!! La propiedad response es la que contiene el cuerpo de la respuesta = los datos que nos interesan, que tendrán el formato que hayamos determinado en la propiedad responseType * !!! Cuando lo que se espera son datos en XML o HTML, hay que recuperarlos de la propoiedad responseXML -> la propiedad responseType NO tiene valores "xml" o "html".
+                    } else {
+                        reject({codigoError: xhr.status, textoError: xhr.statusText}); // Sólo se le pasa UN parámetro, más uno y sólo usará el primero.
+                    }
+                } 
+            }
+            
+            // 4º) Envío de la petición.
+            xhr.send();
+            
+            
+            // Con jQuery
+            /*$.getJSON("http://localhost:3000/paises", function(data, status) {
+                if (status == "success") {
+                    resolve(data);
+                } else {
+                    reject(status);
+                }
+            });*/
+            
+        });
+    
+    promesa.then(
+        function(paises) { // == Esta es la función resolve
+            paises.forEach(function(pais) {
+                /*open = document.createElement("option");
+                open.setAttribute("value", pais.nombre);
+                open.innerHTML = pais.nombre;
+                selectPaises.appendChild(open);
+                console.log(pais.nombre);*/
+                option = $("<option></option>").text(pais.nombre).attr("value", pais.nombre);
+                $(selectPaises).append(option);
+            });
+            $("[value=España]").attr("selected", "selected");
+        }, 
+        function(fallo) { // == Esta es la función reject
+            alert("Ha ocurrido un error: ".concat(fallo.codigoError, " ", fallo.textoError));
+        }
+    );
+    
 });
 
 // Menú de Pestañas
+
 function mostrar(event, formId) {
     
     var tabContent, tabLinks;
@@ -50,6 +113,7 @@ function mostrar(event, formId) {
 }
 
 // Validaciones de Formulario
+
 password.addEventListener("input", function(event) {
     if (!/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8}/.test(password.value)) {
         password.setCustomValidity("La contraseña no tiene el formato correcto.");
@@ -77,6 +141,7 @@ direccion.addEventListener("keyup", function(event) {
 });
 
 formLogin.addEventListener("submit", function(event) {
+    
     var nombreUsuario = formLogin.elements["nombre"].value.trim(),
         password = formLogin.elements["password"].value,
         logged = false;
@@ -105,6 +170,7 @@ formSignup.addEventListener("submit", function(event) {
     setCookie(nombreUsuario, sha256(password.value), "/", 365);
     
     setCookie("user", nombreUsuario, "/");
+    
 });
 
 function crearControlesTarjeta() {
