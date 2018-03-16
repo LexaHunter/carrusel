@@ -63,8 +63,8 @@
   -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
   -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
   transition: transform 0.4s, opacity 0.1s 0.3s; }
-  .estilosimg figcaption.comentarios {
-    height: 50%; }
+  .estilosimg figcaption.caja_comentarios {
+    height: auto; }
   .estilosimg figcaption .boton a {
     position: absolute;
     bottom: 20px;

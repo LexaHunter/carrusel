@@ -62,12 +62,15 @@ header
     text-align: center
     +background("../images/fondo_acuarela.jpg", center, cover)
 
-.button
+%basic_button
     +solid-border(2px, black)
     box-sizing: border-box
     padding: 0.2em 0.5em
     font-weight: bold
     text-align: center
+    
+.button
+    @extend %basic_button
     background-color: rgba(255, 255, 255, 0.7)
   
 #logo_encabezado
@@ -92,13 +95,23 @@ nav
 input
     border: none
     font-family: $font-text
+    
+.search_button
+    @extend %basic_button
+    background-color: white
+    margin: 0.3em auto
         
 #search
     text-align: right
     img
         width: 10%
-    #search_input
+    #search_div
         display: inline
+    
+.items_div
+    position: fixed
+    text-align: right
+    z-index: 100
     
 input[type="search"], input[type="email"], input[type="text"], input[type="password"]
     width: 85%

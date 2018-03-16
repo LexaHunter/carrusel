@@ -16,12 +16,12 @@ var formLogin = document.forms["form_login"],
 window.addEventListener("load", function(event) {
     
     /* 
-    Arrancando en json-server el fichero json/paises.json ene l puerto 3002 mediante el comando: 
+    Arrancando en json-server el fichero json/paises.json ene l puerto 3000 mediante el comando: 
     
-    json-server -p 3002 --watch paises.json
+    json-server --watch paises.json
     */
     
-    /*$.getJSON("http://localhost:3002/paises", function(data, status) {
+    /*$.getJSON("http://localhost:3000/paises", function(data, status) {
         if (status == "success") {
             $.each(data, function(i, pais) {
                 option = $("<option></option>").text(pais.nombre).attr("value", pais.nombre);
@@ -31,8 +31,7 @@ window.addEventListener("load", function(event) {
         }
     });*/
     
-    var url = "http://localhost:3002/paises",
-        open = null,
+    var url = "http://localhost:3000/paises",
         promesa = new Promise(function(resolve, reject) {
         
             // Con el objeto XMLHtpRequest
@@ -59,27 +58,17 @@ window.addEventListener("load", function(event) {
             // 4º) Envío de la petición.
             xhr.send();
             
-            
-            // Con jQuery
-            /*$.getJSON("http://localhost:3000/paises", function(data, status) {
-                if (status == "success") {
-                    resolve(data);
-                } else {
-                    reject(status);
-                }
-            });*/
-            
         });
     
     promesa.then(
         function(paises) { // == Esta es la función resolve
             paises.forEach(function(pais) {
-                /*open = document.createElement("option");
-                open.setAttribute("value", pais.nombre);
-                open.innerHTML = pais.nombre;
-                selectPaises.appendChild(open);
+                /*var option = document.createElement("option");
+                option.setAttribute("value", pais.nombre);
+                option.innerHTML = pais.nombre;
+                selectPaises.appendChild(option);
                 console.log(pais.nombre);*/
-                option = $("<option></option>").text(pais.nombre).attr("value", pais.nombre);
+                var option = $("<option></option>").text(pais.nombre).attr("value", pais.nombre);
                 $(selectPaises).append(option);
             });
             $("[value=España]").attr("selected", "selected");

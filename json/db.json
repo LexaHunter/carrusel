@@ -1,0 +1,848 @@
+{
+  "comentarios": [
+    {
+      "usuario": "Pepe",
+      "comentario": "¡Me encanta!",
+      "id": 1
+    },
+    {
+      "usuario": "Pepa",
+      "comentario": "¡Me gusta!",
+      "id": 2
+    },
+    {
+      "usuario": "Antonio",
+      "comentario": "Buena calidad.",
+      "id": 3
+    },
+    {
+      "usuario": "Manuela",
+      "comentario": "No hay mi talla :-(",
+      "id": 4
+    },
+    {
+      "usuario": "Roberto",
+      "comentario": "Me gusta mucho el color.",
+      "id": 5
+    },
+    {
+      "usuario": "Catalina",
+      "comentario": "¿Y guantes no hay? Que se me quedan las manos frías...",
+      "id": 6
+    },
+    {
+      "usuario": "Enrique",
+      "comentario": "A mi gato le gusta mucho :-)",
+      "id": 7
+    },
+    {
+      "usuario": "Nuria",
+      "comentario": "Necesito complementos.",
+      "id": 8
+    },
+    {
+      "usuario": "Ernesto",
+      "comentario": "¡¡¡Más corbataaaaas!!!",
+      "id": 9
+    }
+  ],
+  "items": [
+    {
+      "item": "abrigos"
+    },
+    {
+      "item": "accesorios"
+    },
+    {
+      "item": "bufandas"
+    },
+    {
+      "item": "calcetines"
+    },
+    {
+      "item": "camisas"
+    },
+    {
+      "item": "camisetas"
+    },
+    {
+      "item": "chaquetas"
+    },
+    {
+      "item": "chándales"
+    },
+    {
+      "item": "chinos"
+    },
+    {
+      "item": "corbatas"
+    },
+    {
+      "item": "jerséis"
+    },
+    {
+      "item": "pantalones cortos"
+    },
+    {
+      "item": "ropa de estar por casa"
+    },
+    {
+      "item": "ropa interior"
+    },
+    {
+      "item": "sudaderas"
+    },
+    {
+      "item": "trajes"
+    },
+    {
+      "item": "vaqueros"
+    },
+    {
+      "item": "zapatos"
+    }
+  ],
+  "paises": [
+    {
+      "nombre": "Afganistán"
+    },
+    {
+      "nombre": "Albania"
+    },
+    {
+      "nombre": "Alemania"
+    },
+    {
+      "nombre": "Andorra"
+    },
+    {
+      "nombre": "Angola"
+    },
+    {
+      "nombre": "Anguila"
+    },
+    {
+      "nombre": "Antártida"
+    },
+    {
+      "nombre": "Antigua y Barbuda"
+    },
+    {
+      "nombre": "Antillas Neerlandesas"
+    },
+    {
+      "nombre": "Arabia Saudita"
+    },
+    {
+      "nombre": "Argelia"
+    },
+    {
+      "nombre": "Argentina"
+    },
+    {
+      "nombre": "Armenia"
+    },
+    {
+      "nombre": "Aruba"
+    },
+    {
+      "nombre": "Australia"
+    },
+    {
+      "nombre": "Austria"
+    },
+    {
+      "nombre": "Azerbayán"
+    },
+    {
+      "nombre": "Bélgica"
+    },
+    {
+      "nombre": "Bahamas"
+    },
+    {
+      "nombre": "Bangladés"
+    },
+    {
+      "nombre": "Barbados"
+    },
+    {
+      "nombre": "Baréin"
+    },
+    {
+      "nombre": "Belice"
+    },
+    {
+      "nombre": "Benín"
+    },
+    {
+      "nombre": "Bielorrusia"
+    },
+    {
+      "nombre": "Birmania"
+    },
+    {
+      "nombre": "Bolivia"
+    },
+    {
+      "nombre": "Bosnia y Herzegovina"
+    },
+    {
+      "nombre": "Botsuana"
+    },
+    {
+      "nombre": "Brasil"
+    },
+    {
+      "nombre": "Brunéi"
+    },
+    {
+      "nombre": "Bulgaria"
+    },
+    {
+      "nombre": "Burkina Faso"
+    },
+    {
+      "nombre": "Burundi"
+    },
+    {
+      "nombre": "Bután"
+    },
+    {
+      "nombre": "Cabo Verde"
+    },
+    {
+      "nombre": "Camboya"
+    },
+    {
+      "nombre": "Camerún"
+    },
+    {
+      "nombre": "Canadá"
+    },
+    {
+      "nombre": "Chad"
+    },
+    {
+      "nombre": "Chile"
+    },
+    {
+      "nombre": "China"
+    },
+    {
+      "nombre": "Chipre"
+    },
+    {
+      "nombre": "Ciudad del Vaticano"
+    },
+    {
+      "nombre": "Colombia"
+    },
+    {
+      "nombre": "Comoras"
+    },
+    {
+      "nombre": "Congo, República del"
+    },
+    {
+      "nombre": "Congo, República Democrática del"
+    },
+    {
+      "nombre": "Corea del Norte"
+    },
+    {
+      "nombre": "Corea del Sur"
+    },
+    {
+      "nombre": "Costa de Marfil"
+    },
+    {
+      "nombre": "Costa Rica"
+    },
+    {
+      "nombre": "Croacia"
+    },
+    {
+      "nombre": "Cuba"
+    },
+    {
+      "nombre": "Dinamarca"
+    },
+    {
+      "nombre": "Dominica"
+    },
+    {
+      "nombre": "Ecuador"
+    },
+    {
+      "nombre": "Egipto"
+    },
+    {
+      "nombre": "El Salvador"
+    },
+    {
+      "nombre": "Emiratos Árabes Unidos"
+    },
+    {
+      "nombre": "Eritrea"
+    },
+    {
+      "nombre": "Eslovaquia"
+    },
+    {
+      "nombre": "Eslovenia"
+    },
+    {
+      "nombre": "España"
+    },
+    {
+      "nombre": "Estados Unidos de América"
+    },
+    {
+      "nombre": "Estonia"
+    },
+    {
+      "nombre": "Etiopía"
+    },
+    {
+      "nombre": "Filipinas"
+    },
+    {
+      "nombre": "Finlandia"
+    },
+    {
+      "nombre": "Fiyi"
+    },
+    {
+      "nombre": "Francia"
+    },
+    {
+      "nombre": "Gabón"
+    },
+    {
+      "nombre": "Gambia"
+    },
+    {
+      "nombre": "Georgia"
+    },
+    {
+      "nombre": "Ghana"
+    },
+    {
+      "nombre": "Gibraltar"
+    },
+    {
+      "nombre": "Granada"
+    },
+    {
+      "nombre": "Grecia"
+    },
+    {
+      "nombre": "Groenlandia"
+    },
+    {
+      "nombre": "Guadalupe"
+    },
+    {
+      "nombre": "Guam"
+    },
+    {
+      "nombre": "Guatemala"
+    },
+    {
+      "nombre": "Guayana Francesa"
+    },
+    {
+      "nombre": "Guernsey"
+    },
+    {
+      "nombre": "Guinea"
+    },
+    {
+      "nombre": "Guinea Ecuatorial"
+    },
+    {
+      "nombre": "Guinea-Bissau"
+    },
+    {
+      "nombre": "Guyana"
+    },
+    {
+      "nombre": "Haití"
+    },
+    {
+      "nombre": "Honduras"
+    },
+    {
+      "nombre": "Hong kong"
+    },
+    {
+      "nombre": "Hungría"
+    },
+    {
+      "nombre": "India"
+    },
+    {
+      "nombre": "Indonesia"
+    },
+    {
+      "nombre": "Irán"
+    },
+    {
+      "nombre": "Irak"
+    },
+    {
+      "nombre": "Irlanda"
+    },
+    {
+      "nombre": "Isla Bouvet"
+    },
+    {
+      "nombre": "Isla de Man"
+    },
+    {
+      "nombre": "Isla de Navidad"
+    },
+    {
+      "nombre": "Isla Norfolk"
+    },
+    {
+      "nombre": "Islandia"
+    },
+    {
+      "nombre": "Islas Bermudas"
+    },
+    {
+      "nombre": "Islas Caimán"
+    },
+    {
+      "nombre": "Islas Cocos (Keeling)"
+    },
+    {
+      "nombre": "Islas Cook"
+    },
+    {
+      "nombre": "Islas de Åland"
+    },
+    {
+      "nombre": "Islas Feroe"
+    },
+    {
+      "nombre": "Islas Georgias del Sur y Sandwich del Sur"
+    },
+    {
+      "nombre": "Islas Heard y McDonald"
+    },
+    {
+      "nombre": "Islas Maldivas"
+    },
+    {
+      "nombre": "Islas Malvinas"
+    },
+    {
+      "nombre": "Islas Marianas del Norte"
+    },
+    {
+      "nombre": "Islas Marshall"
+    },
+    {
+      "nombre": "Islas Pitcairn"
+    },
+    {
+      "nombre": "Islas Salomón"
+    },
+    {
+      "nombre": "Islas Turcas y Caicos"
+    },
+    {
+      "nombre": "Islas Ultramarinas Menores de Estados Unidos"
+    },
+    {
+      "nombre": "Islas Vírgenes Británicas"
+    },
+    {
+      "nombre": "Islas Vírgenes de los Estados Unidos"
+    },
+    {
+      "nombre": "Israel"
+    },
+    {
+      "nombre": "Italia"
+    },
+    {
+      "nombre": "Jamaica"
+    },
+    {
+      "nombre": "Japón"
+    },
+    {
+      "nombre": "Jersey"
+    },
+    {
+      "nombre": "Jordania"
+    },
+    {
+      "nombre": "Kazajistán"
+    },
+    {
+      "nombre": "Kenia"
+    },
+    {
+      "nombre": "Kirgizstán"
+    },
+    {
+      "nombre": "Kiribati"
+    },
+    {
+      "nombre": "Kuwait"
+    },
+    {
+      "nombre": "Líbano"
+    },
+    {
+      "nombre": "Laos"
+    },
+    {
+      "nombre": "Lesoto"
+    },
+    {
+      "nombre": "Letonia"
+    },
+    {
+      "nombre": "Liberia"
+    },
+    {
+      "nombre": "Libia"
+    },
+    {
+      "nombre": "Liechtenstein"
+    },
+    {
+      "nombre": "Lituania"
+    },
+    {
+      "nombre": "Luxemburgo"
+    },
+    {
+      "nombre": "México"
+    },
+    {
+      "nombre": "Mónaco"
+    },
+    {
+      "nombre": "Macao"
+    },
+    {
+      "nombre": "Macedonia"
+    },
+    {
+      "nombre": "Madagascar"
+    },
+    {
+      "nombre": "Malasia"
+    },
+    {
+      "nombre": "Malawi"
+    },
+    {
+      "nombre": "Mali"
+    },
+    {
+      "nombre": "Malta"
+    },
+    {
+      "nombre": "Marruecos"
+    },
+    {
+      "nombre": "Martinica"
+    },
+    {
+      "nombre": "Mauricio"
+    },
+    {
+      "nombre": "Mauritania"
+    },
+    {
+      "nombre": "Mayotte"
+    },
+    {
+      "nombre": "Micronesia"
+    },
+    {
+      "nombre": "Moldavia"
+    },
+    {
+      "nombre": "Mongolia"
+    },
+    {
+      "nombre": "Montenegro"
+    },
+    {
+      "nombre": "Montserrat"
+    },
+    {
+      "nombre": "Mozambique"
+    },
+    {
+      "nombre": "Namibia"
+    },
+    {
+      "nombre": "Nauru"
+    },
+    {
+      "nombre": "Nepal"
+    },
+    {
+      "nombre": "Nicaragua"
+    },
+    {
+      "nombre": "Niger"
+    },
+    {
+      "nombre": "Nigeria"
+    },
+    {
+      "nombre": "Niue"
+    },
+    {
+      "nombre": "Noruega"
+    },
+    {
+      "nombre": "Nueva Caledonia"
+    },
+    {
+      "nombre": "Nueva Zelanda"
+    },
+    {
+      "nombre": "Omán"
+    },
+    {
+      "nombre": "Países Bajos"
+    },
+    {
+      "nombre": "Pakistán"
+    },
+    {
+      "nombre": "Palau"
+    },
+    {
+      "nombre": "Palestina"
+    },
+    {
+      "nombre": "Panamá"
+    },
+    {
+      "nombre": "Papúa Nueva Guinea"
+    },
+    {
+      "nombre": "Paraguay"
+    },
+    {
+      "nombre": "Perú"
+    },
+    {
+      "nombre": "Polinesia Francesa"
+    },
+    {
+      "nombre": "Polonia"
+    },
+    {
+      "nombre": "Portugal"
+    },
+    {
+      "nombre": "Puerto Rico"
+    },
+    {
+      "nombre": "Qatar"
+    },
+    {
+      "nombre": "Reino Unido"
+    },
+    {
+      "nombre": "República Centroafricana"
+    },
+    {
+      "nombre": "República Checa"
+    },
+    {
+      "nombre": "República Dominicana"
+    },
+    {
+      "nombre": "Reunión"
+    },
+    {
+      "nombre": "Ruanda"
+    },
+    {
+      "nombre": "Rumanía"
+    },
+    {
+      "nombre": "Rusia"
+    },
+    {
+      "nombre": "Sáhara Occidental"
+    },
+    {
+      "nombre": "Samoa"
+    },
+    {
+      "nombre": "Samoa Americana"
+    },
+    {
+      "nombre": "San Bartolomé"
+    },
+    {
+      "nombre": "San Cristóbal y Nieves"
+    },
+    {
+      "nombre": "San Marino"
+    },
+    {
+      "nombre": "San Martín (Francia)"
+    },
+    {
+      "nombre": "San Pedro y Miquelón"
+    },
+    {
+      "nombre": "San Vicente y las Granadinas"
+    },
+    {
+      "nombre": "Santa Elena"
+    },
+    {
+      "nombre": "Santa Lucía"
+    },
+    {
+      "nombre": "Santo Tomé y Príncipe"
+    },
+    {
+      "nombre": "Senegal"
+    },
+    {
+      "nombre": "Serbia"
+    },
+    {
+      "nombre": "Seychelles"
+    },
+    {
+      "nombre": "Sierra Leona"
+    },
+    {
+      "nombre": "Singapur"
+    },
+    {
+      "nombre": "Siria"
+    },
+    {
+      "nombre": "Somalia"
+    },
+    {
+      "nombre": "Sri Lanka"
+    },
+    {
+      "nombre": "Sudáfrica"
+    },
+    {
+      "nombre": "Sudán"
+    },
+    {
+      "nombre": "Sudán del Sur"
+    },
+    {
+      "nombre": "Suecia"
+    },
+    {
+      "nombre": "Suiza"
+    },
+    {
+      "nombre": "Surinam"
+    },
+    {
+      "nombre": "Svalbard y Jan Mayen"
+    },
+    {
+      "nombre": "Swazilandia"
+    },
+    {
+      "nombre": "Tadjikistán"
+    },
+    {
+      "nombre": "Tailandia"
+    },
+    {
+      "nombre": "Taiwán"
+    },
+    {
+      "nombre": "Tanzania"
+    },
+    {
+      "nombre": "Territorio Británico del Océano Índico"
+    },
+    {
+      "nombre": "Territorios Australes y Antárticos Franceses"
+    },
+    {
+      "nombre": "Timor Oriental"
+    },
+    {
+      "nombre": "Togo"
+    },
+    {
+      "nombre": "Tokelau"
+    },
+    {
+      "nombre": "Tonga"
+    },
+    {
+      "nombre": "Trinidad y Tobago"
+    },
+    {
+      "nombre": "Túnez"
+    },
+    {
+      "nombre": "Turkmenistán"
+    },
+    {
+      "nombre": "Turquía"
+    },
+    {
+      "nombre": "Tuvalu"
+    },
+    {
+      "nombre": "Ucrania"
+    },
+    {
+      "nombre": "Uganda"
+    },
+    {
+      "nombre": "Uruguay"
+    },
+    {
+      "nombre": "Uzbekistán"
+    },
+    {
+      "nombre": "Vanuatu"
+    },
+    {
+      "nombre": "Venezuela"
+    },
+    {
+      "nombre": "Vietnam"
+    },
+    {
+      "nombre": "Wallis y Futuna"
+    },
+    {
+      "nombre": "Yemen"
+    },
+    {
+      "nombre": "Yibuti"
+    },
+    {
+      "nombre": "Zambia"
+    },
+    {
+      "nombre": "Zimbabue"
+    }
+  ]
+}
